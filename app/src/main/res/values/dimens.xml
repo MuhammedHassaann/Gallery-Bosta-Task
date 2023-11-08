@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Paddings-->
+    <dimen name="xxx_small">2.dp</dimen>
+    <dimen name="xx_small">4.dp</dimen>
+    <dimen name="x_small">8.dp</dimen>
+    <dimen name="small">12.dp</dimen>
+    <dimen name="medium">16.dp</dimen>
+    <dimen name="large">24.dp</dimen>
+    <dimen name="x_large">32.dp</dimen>
+
+    <!--Sizes-->
+    <dimen name="logo">200.dp</dimen>
+    <dimen name="error_img">40.dp</dimen>
+    <dimen name="profile_img">50.dp</dimen>
+    <dimen name="album_thumbnail">150.dp</dimen>
+
+
+</resources>

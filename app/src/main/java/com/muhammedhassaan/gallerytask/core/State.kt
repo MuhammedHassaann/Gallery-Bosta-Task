@@ -1,4 +1,4 @@
-package com.muhammedhassaan.gallerytask.domain.utils
+package com.muhammedhassaan.gallerytask.core
 
 sealed class Result<T>(
     val data: T? = null,

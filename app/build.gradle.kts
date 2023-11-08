@@ -78,6 +78,9 @@ dependencies {
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
 
+    //Lottie
+    implementation(libs.lottie)
+
     //ViewModel
     implementation(libs.viewmodel.compose)
 

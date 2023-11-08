@@ -11,4 +11,6 @@ interface RemoteDataSource {
     suspend fun getAlbums(userId: Int): List<Album>
 
     suspend fun getPhotos(albumId: Int): List<Photo>
+
+    suspend fun getAlbumWithImage(userId: Int): List<Triple<Album, String, Int>>
 }

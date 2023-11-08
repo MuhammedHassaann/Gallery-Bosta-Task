@@ -9,6 +9,7 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
@@ -53,6 +54,10 @@ fun GalleryTaskTheme(
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
+
+    val themeColors = if (darkTheme) MyColors.darkModePalette
+    else MyColors.lightModePalette
+
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
@@ -62,9 +67,11 @@ fun GalleryTaskTheme(
         }
     }
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
+    CompositionLocalProvider (MyColors.localColorsPalette provides themeColors){
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = Typography,
+            content = content
+        )
+    }
 }
